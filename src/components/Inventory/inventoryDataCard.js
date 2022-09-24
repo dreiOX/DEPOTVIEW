@@ -12,45 +12,41 @@ import {
 } from "./InventoryStyles";
 import { AiOutlineMore } from "react-icons/ai";
 
-const InventoryCard = ({ inventory, index }) => {
+const InventoryCard = ({ inData, index }) => {
   return (
     <Card key={index}>
       <CardTop>
-        <CardId>{inventory.containerNumber}</CardId>
-        <CardStatus>{inventory.containerCondition}</CardStatus>
+        <CardId>{inData.containerNumber}</CardId>
+        <CardStatus>{inData.containerCondition}</CardStatus>
       </CardTop>
 
-      <CardMiddle>{inventory.containerLocation}</CardMiddle>
+      <CardMiddle>{inData.containerLocation}</CardMiddle>
 
       <CardBottom>
         <CardDates>
-          <p>{inventory.gateInDate}</p>
-          <p>{inventory.dateOut}</p>
+          <p>{inData.gateInDate}</p>
+          <p>{inData.dateOut}</p>
         </CardDates>
         <CardIcon>
           <AiOutlineMore />
         </CardIcon>
         <div>
-          <p>{inventory.truckNum}</p>
-          <p>{inventory.containerStatus}</p>
+          <p>{inData.truckNum}</p>
+          <p>{inData.containerStatus}</p>
         </div>
       </CardBottom>
     </Card>
   );
 };
 
-function InventoryDataCard({ inventories }) {
+function InventoryDataCard({ gateInData }) {
   return (
     <>
-      {inventories?.length > 0 ? (
+      {gateInData?.length > 0 ? (
         <Container>
-          {inventories &&
-            inventories?.map((inventory, index) => (
-              <InventoryCard
-                key={index}
-                inventory={inventory}
-                index={index}
-              />
+          {gateInData &&
+            gateInData?.map((inData, index) => (
+              <InventoryCard key={index} inData={inData} index={index} />
             ))}
         </Container>
       ) : (

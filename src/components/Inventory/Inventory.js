@@ -1,12 +1,12 @@
 import InventoryDataCard from "./inventoryDataCard";
 import InventorySearch from "./InventorySearch";
 
-function Inventory({ inventories }) {
+function Inventory({ gateInData }) {
   return (
     <div>
       <InventorySearch />
 
-      <InventoryDataCard inventories={inventories} />
+      <InventoryDataCard gateInData={gateInData} />
     </div>
   );
 }

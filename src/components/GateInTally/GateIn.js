@@ -1,13 +1,12 @@
 import Menu from "../Menu/Menu";
 import GateInForm from "./GateInForm";
 
-function GateIn({ setInventories }) {
-  
+function GateIn({ setGateInData }) {
   return (
     <div>
       <Menu />
 
-      <GateInForm setInventories={setInventories}/>
+      <GateInForm setGateInData={setGateInData} />
     </div>
   );
 }

@@ -1,16 +1,16 @@
 import { useState } from "react";
 import {
   Container,
-  Form,
-  Input,
-  Heading,
   Card,
-  Select,
+  Form,
+  Heading,
+  Input,
   Label,
+  Select,
   Button,
-} from "./GateInFormStyles";
+} from "./GateOutFormStyles";
 
-function GateInForm({ setGateInData }) {
+function GateOutForm({ setGateOutData }) {
   const [inputs, setInputs] = useState({
     shippingLine: "",
     containerNumber: "",
@@ -27,23 +27,13 @@ function GateInForm({ setGateInData }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setGateInData((prevGateInDataState) => [...prevGateInDataState, inputs]);
+    setGateOutData((...prevGateOutDataState) => [prevGateOutDataState, inputs]);
     console.log(inputs);
-
-    setInputs({
-      shippingLine: "",
-      containerNumber: "",
-      truckNumber: "",
-      containerSize: "",
-      containerCondition: "",
-      containerLocation: "",
-      gateInDate: "",
-    });
   };
 
   return (
     <Container>
-      <Heading>Container Gate-In Tally</Heading>
+      <Heading>Container Gate-Out Tally</Heading>
       <Form onSubmit={handleSubmit}>
         <Card>
           <Label>Shipping line*:</Label>
@@ -128,4 +118,4 @@ function GateInForm({ setGateInData }) {
   );
 }
 
-export default GateInForm;
+export default GateOutForm;
