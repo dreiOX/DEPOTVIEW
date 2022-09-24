@@ -10,13 +10,16 @@ function Dashboard() {
   return (
     <div>
       <Menu />
+
       <DashboardContainer>
         <h4>Dashboard</h4>
+
         <TopCards>
           <TotalInventory />
           <TotalTallyIn />
           <TotalTallyOut />
         </TopCards>
+        
         <LowerCards>
           <Damaged />
           <Damaged />

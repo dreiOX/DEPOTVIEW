@@ -6,10 +6,12 @@ export const DashboardContainer = styled.div`
   // display: flex;
   // gap: 2em;
 `;
+
 export const TopCards = styled.div`
   display: flex;
   gap: 2em;
 `;
+
 export const LowerCards = styled.div`
   margin-top: 2em;
   display: flex;
