@@ -2,11 +2,12 @@ import React from "react";
 import Menu from "../Menu/Menu";
 import Inventory from "../Inventory/Inventory";
 
-function ContainerManagement() {
+function ContainerManagement({ inventories }) {
   return (
     <div>
       <Menu />
-      <Inventory />
+
+      <Inventory inventories={inventories}/>
     </div>
   );
 }

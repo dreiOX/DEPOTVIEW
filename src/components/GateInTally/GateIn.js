@@ -1,13 +1,13 @@
-import { useState } from "react";
 import Menu from "../Menu/Menu";
 import GateInForm from "./GateInForm";
 
-function GateIn() {
+function GateIn({ setInventories }) {
   
   return (
     <div>
       <Menu />
-      <GateInForm />
+
+      <GateInForm setInventories={setInventories}/>
     </div>
   );
 }

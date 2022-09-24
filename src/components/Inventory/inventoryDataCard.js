@@ -12,32 +12,41 @@ import {
 } from "./InventoryStyles";
 import { AiOutlineMore } from "react-icons/ai";
 
-function InventoryDataCard(props) {
+function InventoryDataCard({ inventories }) {
   return (
-    <Container>
-      <Card>
-        <CardTop>
-          <CardId>{props.containerNum}</CardId>
-          <CardStatus>{props.containerStatus}</CardStatus>
-        </CardTop>
+    <>
+      {inventories?.length > 0 ? (
+        <Container>
+          {inventories &&
+            inventories?.map((inventory, index) => (
+              <Card key={index}>
+                <CardTop>
+                  <CardId>{inventory.containerNumber}</CardId>
+                  <CardStatus>{inventory.containerCondition}</CardStatus>
+                </CardTop>
 
-        <CardMiddle>{props.containerLocation}</CardMiddle>
+                <CardMiddle>{inventory.containerLocation}</CardMiddle>
 
-        <CardBottom>
-          <CardDates>
-            <p>{props.dateIn}</p>
-            <p>{props.dateOut}</p>
-          </CardDates>
-          <CardIcon>
-            <AiOutlineMore />
-          </CardIcon>
-          <div>
-            <p>{props.truckNum}</p>
-            <p>{props.containerStatus}</p>
-          </div>
-        </CardBottom>
-      </Card>
-    </Container>
+                <CardBottom>
+                  <CardDates>
+                    <p>{inventory.gateInDate}</p>
+                    <p>{inventory.dateOut}</p>
+                  </CardDates>
+                  <CardIcon>
+                    <AiOutlineMore />
+                  </CardIcon>
+                  <div>
+                    <p>{inventory.truckNum}</p>
+                    <p>{inventory.containerStatus}</p>
+                  </div>
+                </CardBottom>
+              </Card>
+            ))}
+        </Container>
+      ) : (
+        <p>No Data</p>
+      )}
+    </>
   );
 }
 
