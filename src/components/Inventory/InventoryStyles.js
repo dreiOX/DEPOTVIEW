@@ -33,7 +33,7 @@ export const Card = styled.div`
   height: 10em;
   padding: 1em;
   margin: 0.5em 1em;
-  border-left: 0.2em solid #ffb347;
+  border-left: 0.2em solid green;
 `;
 
 export const CardTop = styled.div`
