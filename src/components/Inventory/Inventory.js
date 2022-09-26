@@ -1,12 +1,13 @@
-import InventoryDataCard from "./inventoryDataCard";
+import GateInDataCard from "./GateInDataCard";
+import GateOutDataCard from "./GateOutDataCard";
 import InventorySearch from "./InventorySearch";
 
-function Inventory({ gateInData }) {
+function Inventory({ gateInData, gateOutData }) {
   return (
     <div>
       <InventorySearch />
-
-      <InventoryDataCard gateInData={gateInData} />
+      <GateInDataCard gateInData={gateInData} />
+      <GateOutDataCard gateInData={gateOutData} />
     </div>
   );
 }

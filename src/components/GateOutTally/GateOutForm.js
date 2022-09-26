@@ -17,8 +17,8 @@ function GateOutForm({ setGateOutData }) {
     truckNumber: "",
     containerSize: "",
     containerCondition: "",
-    containerLocation: "",
     gateInDate: "",
+    containerStatus: "",
   });
 
   const handleChange = (e) => {
@@ -29,6 +29,16 @@ function GateOutForm({ setGateOutData }) {
     e.preventDefault();
     setGateOutData((...prevGateOutDataState) => [prevGateOutDataState, inputs]);
     console.log(inputs);
+
+    setInputs({
+      shippingLine: "",
+      containerNumber: "",
+      truckNumber: "",
+      containerSize: "",
+      containerCondition: "",
+      gateInDate: "",
+      containerStatus: "",
+    });
   };
 
   return (
@@ -66,6 +76,16 @@ function GateOutForm({ setGateOutData }) {
           />
         </Card>
         <Card>
+          <Label>Container status*:</Label>
+          <Input
+            type="text"
+            name="containerStatus"
+            value="EXITED"
+            onChange={handleChange}
+            placeholder="Container status"
+          />
+        </Card>
+        <Card>
           <Label>Container size*:</Label>
           <Select
             type="text"
@@ -91,16 +111,7 @@ function GateOutForm({ setGateOutData }) {
             <option value="DAMAGED">DAMAGED</option>
           </Select>
         </Card>
-        <Card>
-          <Label>Container location*:</Label>
-          <Input
-            type="text"
-            name="containerLocation"
-            value={inputs.containerLocation}
-            onChange={handleChange}
-            placeholder="Container location"
-          />
-        </Card>
+
         <Card>
           <Label>Gate in date*:</Label>
           <Input

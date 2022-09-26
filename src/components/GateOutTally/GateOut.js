@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../Menu/Menu";
 import GateOutForm from "./GateOutForm";
 
-function GateOut({ setGateOutData }) {
+function GateOutTally({ setGateOutData }) {
   return (
     <div>
       <Menu />
@@ -11,4 +11,4 @@ function GateOut({ setGateOutData }) {
   );
 }
 
-export default GateOut;
+export default GateOutTally;

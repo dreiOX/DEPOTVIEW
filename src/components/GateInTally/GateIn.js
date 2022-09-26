@@ -1,7 +1,7 @@
 import Menu from "../Menu/Menu";
 import GateInForm from "./GateInForm";
 
-function GateIn({ setGateInData }) {
+function GateInTally({ setGateInData }) {
   return (
     <div>
       <Menu />
@@ -11,4 +11,4 @@ function GateIn({ setGateInData }) {
   );
 }
 
-export default GateIn;
+export default GateInTally;

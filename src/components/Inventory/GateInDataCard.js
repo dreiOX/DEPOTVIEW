@@ -12,7 +12,7 @@ import {
 } from "./InventoryStyles";
 import { AiOutlineMore } from "react-icons/ai";
 
-const InventoryCard = ({ inData, index }) => {
+const GateInCard = ({ inData, index }) => {
   return (
     <Card key={index}>
       <CardTop>
@@ -31,7 +31,7 @@ const InventoryCard = ({ inData, index }) => {
           <AiOutlineMore />
         </CardIcon>
         <div>
-          <p>{inData.truckNum}</p>
+          <p>{inData.truckNumber}</p>
           <p>{inData.containerStatus}</p>
         </div>
       </CardBottom>
@@ -39,14 +39,14 @@ const InventoryCard = ({ inData, index }) => {
   );
 };
 
-function InventoryDataCard({ gateInData }) {
+function GateInDataCard({ gateInData }) {
   return (
     <>
       {gateInData?.length > 0 ? (
         <Container>
           {gateInData &&
             gateInData?.map((inData, index) => (
-              <InventoryCard key={index} inData={inData} index={index} />
+              <GateInCard key={index} inData={inData} index={index} />
             ))}
         </Container>
       ) : (
@@ -56,4 +56,4 @@ function InventoryDataCard({ gateInData }) {
   );
 }
 
-export default InventoryDataCard;
+export default GateInDataCard;
