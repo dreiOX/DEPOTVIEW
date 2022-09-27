@@ -1,19 +1,38 @@
 import React from "react";
+import { Container, Heading, Data, Row } from "./HistoryTableStyles";
 
-function HistoryTable() {
+function HistoryTable({ gateInData, gateOutData }) {
+  
   return (
-    <div>
+    <Container>
       <table>
-        <tr>
-          <th>Container Number</th>
-          <th>Container Size</th>
-          <th>Container Status</th>
-          <th>Container Location</th>
-          <th>Gate In Date</th>
-          <th>Gate Out Date</th>
-        </tr>
+        <Row>
+          <Heading>S.No</Heading>
+          <Heading>Container Number</Heading>
+          <Heading>Container Size</Heading>
+          <Heading>Container Status</Heading>
+          <Heading>Container Location</Heading>
+          <Heading>Container Condition</Heading>
+          <Heading>Gate In Date</Heading>
+          <Heading>Gate Out Date</Heading>
+        </Row>
+
+        {gateInData?.map((data, index) => {
+          return (
+            <Row key={index}>
+              <Data>{index + 1}</Data>
+              <Data>{data.containerNumber}</Data>
+              <Data>{data.containerSize}</Data>
+              <Data>{data.containerStatus}</Data>
+              <Data>{data.containerLocation}</Data>
+              <Data>{data.containerCondition}</Data>
+              <Data>{data.gateInDate}</Data>
+              <Data>15 MAY 2022</Data>
+            </Row>
+          );
+        })}
       </table>
-    </div>
+    </Container>
   );
 }
 
