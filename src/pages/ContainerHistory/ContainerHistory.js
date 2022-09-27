@@ -2,11 +2,11 @@ import React from "react";
 import Menu from "../../components/Menu/Menu";
 import HistoryTable from "./HistoryTable";
 
-function ContainerHistory() {
+function ContainerHistory({gateInData}) {
   return (
     <div>
       <Menu />
-      <HistoryTable />
+      <HistoryTable gateInData={gateInData}/>
     </div>
   );
 }

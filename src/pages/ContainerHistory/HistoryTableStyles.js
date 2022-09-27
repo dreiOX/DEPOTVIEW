@@ -15,4 +15,5 @@ export const Row = styled.tr`
 export const Data = styled.td`
   padding: 1em 2em;
   text-align: center;
+  border: 1px solid black;
 `;

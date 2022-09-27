@@ -28,7 +28,6 @@ function GateOutForm({ setGateOutData }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setGateOutData((prevGateOutDataState) => [...prevGateOutDataState, inputs]);
-    console.log(inputs);
 
     setInputs({
       shippingLine: "",

@@ -28,7 +28,6 @@ function GateInForm({ setGateInData }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setGateInData((prevGateInDataState) => [...prevGateInDataState, inputs]);
-    console.log(inputs);
 
     setInputs({
       shippingLine: "",
