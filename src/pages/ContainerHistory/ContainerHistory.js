@@ -1,10 +1,12 @@
 import React from "react";
-import Menu from "../Menu/Menu";
+import Menu from "../../components/Menu/Menu";
+import HistoryTable from "./HistoryTable";
 
 function ContainerHistory() {
   return (
     <div>
       <Menu />
+      <HistoryTable />
     </div>
   );
 }

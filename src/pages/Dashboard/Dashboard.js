@@ -1,10 +1,10 @@
 import React from "react";
-import Menu from "../Menu/Menu";
+import Menu from "../../components/Menu/Menu";
 import { DashboardContainer, TopCards, LowerCards } from "./DashboardStyles";
-import TotalTallyIn from "../TotalTallyIn/TotalTallyIn";
-import TotalTallyOut from "../TotalTallyOut/TotalTallyOut";
-import TotalInventory from "../TotalInventory/TotalInventory";
-import Damaged from "../Damaged/Damaged";
+import TotalTallyIn from "../../components/TotalTallyIn/TotalTallyIn";
+import TotalTallyOut from "../../components/TotalTallyOut/TotalTallyOut";
+import TotalInventory from "../../components/TotalInventory/TotalInventory";
+import Damaged from "../../components/Damaged/Damaged";
 
 function Dashboard() {
   return (
@@ -19,7 +19,7 @@ function Dashboard() {
           <TotalTallyIn />
           <TotalTallyOut />
         </TopCards>
-        
+
         <LowerCards>
           <Damaged />
           <Damaged />

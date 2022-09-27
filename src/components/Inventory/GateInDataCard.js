@@ -9,7 +9,7 @@ import {
   CardIcon,
   CardStatus,
   CardId,
-} from "./InventoryStyles";
+} from "./GateInStyles";
 import { AiOutlineMore } from "react-icons/ai";
 
 const GateInCard = ({ inData, index }) => {
@@ -39,7 +39,35 @@ const GateInCard = ({ inData, index }) => {
   );
 };
 
-function GateInDataCard({ gateInData }) {
+// const GateOutCard = ({ outData, index }) => {
+//   return (
+//     <Card key={index}>
+//       <CardTop>
+//         <CardId>{outData.containerNumber}</CardId>
+//         <CardStatus>{outData.containerCondition}</CardStatus>
+//       </CardTop>
+
+//       <CardMiddle>{outData.containerStatus}</CardMiddle>
+
+//       <CardBottom>
+//         <CardDates>
+//           <p>{outData.dateOut}</p>
+//         </CardDates>
+//         <CardIcon>
+//           <AiOutlineMore />
+//         </CardIcon>
+//         <div>
+//           <p>{outData.truckNumber}</p>
+//           <p>{outData.containerStatus}</p>
+//         </div>
+//       </CardBottom>
+//     </Card>
+//   );
+// };
+
+function GateInDataCard({ gateInData, gateOutData }) {
+  // const isGateInData = gateInData.isGateIndata.length;
+  // const isGateOutData = gateOutData.isGateOutdata.length;
   return (
     <>
       {gateInData?.length > 0 ? (
@@ -52,6 +80,8 @@ function GateInDataCard({ gateInData }) {
       ) : (
         <p>No Data</p>
       )}
+
+     
     </>
   );
 }

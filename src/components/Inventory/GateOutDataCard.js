@@ -9,7 +9,7 @@ import {
   CardIcon,
   CardStatus,
   CardId,
-} from "./InventoryStyles";
+} from "./GateOutStyles";
 import { AiOutlineMore } from "react-icons/ai";
 
 const GateOutCard = ({ outData, index }) => {

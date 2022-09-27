@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "../Menu/Menu";
+import Menu from "../../components/Menu/Menu";
 import GateOutForm from "./GateOutForm";
 
 function GateOutTally({ setGateOutData }) {

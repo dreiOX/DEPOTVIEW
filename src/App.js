@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard/Dashboard";
-import ContainerManagement from "./components/ContainerManagement/ContainerManagement";
-import GateInTally from "./components/GateInTally/GateIn";
-import GateOutTally from "./components/GateOutTally/GateOut";
-import ContainerHistory from "./components/ContainerHistory/ContainerHistory";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import ContainerManagement from "./pages/ContainerManagement/ContainerManagement";
+import GateInTally from "./pages/GateInTally/GateIn";
+import GateOutTally from "./pages/GateOutTally/GateOut";
+import ContainerHistory from "./pages/ContainerHistory/ContainerHistory";
 import { useState } from "react";
 
 function App() {
