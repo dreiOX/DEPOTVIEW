@@ -39,31 +39,31 @@ const GateInCard = ({ inData, index }) => {
   );
 };
 
-// const GateOutCard = ({ outData, index }) => {
-//   return (
-//     <Card key={index}>
-//       <CardTop>
-//         <CardId>{outData.containerNumber}</CardId>
-//         <CardStatus>{outData.containerCondition}</CardStatus>
-//       </CardTop>
+const GateOutCard = ({ outData, index }) => {
+  return (
+    <Card key={index}>
+      <CardTop>
+        <CardId>{outData.containerNumber}</CardId>
+        <CardStatus>{outData.containerCondition}</CardStatus>
+      </CardTop>
 
-//       <CardMiddle>{outData.containerStatus}</CardMiddle>
+      <CardMiddle>{outData.containerStatus}</CardMiddle>
 
-//       <CardBottom>
-//         <CardDates>
-//           <p>{outData.dateOut}</p>
-//         </CardDates>
-//         <CardIcon>
-//           <AiOutlineMore />
-//         </CardIcon>
-//         <div>
-//           <p>{outData.truckNumber}</p>
-//           <p>{outData.containerStatus}</p>
-//         </div>
-//       </CardBottom>
-//     </Card>
-//   );
-// };
+      <CardBottom>
+        <CardDates>
+          <p>{outData.dateOut}</p>
+        </CardDates>
+        <CardIcon>
+          <AiOutlineMore />
+        </CardIcon>
+        <div>
+          <p>{outData.truckNumber}</p>
+          <p>{outData.containerStatus}</p>
+        </div>
+      </CardBottom>
+    </Card>
+  );
+};
 
 function GateInDataCard({ gateInData, gateOutData }) {
   // const isGateInData = gateInData.isGateIndata;

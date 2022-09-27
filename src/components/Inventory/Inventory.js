@@ -1,5 +1,5 @@
 import GateInDataCard from "./GateInDataCard";
-// import GateOutDataCard from "./GateOutDataCard";
+import GateOutDataCard from "./GateOutDataCard";
 // import InventorySearch from "./InventorySearch";
 
 function Inventory({ gateInData, gateOutData }) {
@@ -7,7 +7,7 @@ function Inventory({ gateInData, gateOutData }) {
     <div>
       {/* <InventorySearch /> */}
       <GateInDataCard gateInData={gateInData} gateOutData={gateOutData} />
-      {/* <GateOutDataCard gateOutData={gateOutData} /> */}
+      <GateOutDataCard gateOutData={gateOutData} />
     </div>
   );
 }
