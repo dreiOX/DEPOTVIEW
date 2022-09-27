@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Heading, Data, Row } from "./HistoryTableStyles";
+import { Container, Heading, Data, Row, BodyRow } from "./HistoryTableStyles";
 
 function HistoryTable({ gateInData, gateOutData }) {
   return (

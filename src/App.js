@@ -32,7 +32,15 @@ function App() {
             path="/Gate-out-tally"
             element={<GateOutTally setGateOutData={setGateOutData} />}
           />
-          <Route path="/Container-history" element={<ContainerHistory />} />
+          <Route
+            path="/Container-history"
+            element={
+              <ContainerHistory
+                gateInData={gateInData}
+                gateOutData={gateOutData}
+              />
+            }
+          />
         </Routes>
       </Router>
     </div>

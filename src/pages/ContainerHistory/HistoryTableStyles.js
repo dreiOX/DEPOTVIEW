@@ -9,11 +9,10 @@ export const Heading = styled.th`
 `;
 
 export const Row = styled.tr`
-  
+  border: 1px solid black;
 `;
 
 export const Data = styled.td`
   padding: 1em 2em;
   text-align: center;
-  border: 1px solid black;
 `;
