@@ -6,6 +6,13 @@ export const DashboardContainer = styled.div`
   // display: flex;
   // gap: 2em;
 `;
+export const Heading = styled.div`
+  padding-bottom: 4em;
+  font-weight: bold;
+  &:hover {
+    color: green;
+  }
+`;
 
 export const TopCards = styled.div`
   display: flex;

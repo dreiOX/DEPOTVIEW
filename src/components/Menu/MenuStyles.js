@@ -30,4 +30,8 @@ export const NavLink = styled(Link)`
     color: #059443;
     transition: 0.2s ease-in;
   }
+  &:focus {
+    box-shadow: inset 3px 0 0px 0px #06c258;
+    color: #059443;
+  }
 `;

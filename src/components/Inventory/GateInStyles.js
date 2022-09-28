@@ -20,6 +20,15 @@ export const Cover = styled.div`
   gap: 1em;
 `;
 
+export const Heading = styled.div`
+  margin: auto;
+  font-weight: bold;
+  font-size: 1em;
+  width: 40%;
+  padding: 1em;
+  // background: blue;
+`;
+
 export const Container = styled.div`
   // margin-left: 20%;
   width: 50%;
@@ -32,7 +41,8 @@ export const Card = styled.div`
   height: 10em;
   padding: 1em;
   margin: 0.5em 1em;
-  border-left: 0.2em solid ${(props) => (props.cardColor ? "green" : "#ffb347")};
+  border-left: 0.2em solid
+    ${(props) => (props.cardColor ? "#06c258" : "#ffb347")};
 `;
 
 export const CardTop = styled.div`
@@ -48,7 +58,7 @@ export const CardId = styled.div`
   font-weight: bold;
 `;
 export const CardStatus = styled.div`
-  background: ${(props) => (props.cardColor ? "green" : "#ffb347")};
+  background: ${(props) => (props.cardColor ? "#06c258" : "#ffb347")};
   padding: 4px 10px;
   color: #fff;
   border-radius: 50px;

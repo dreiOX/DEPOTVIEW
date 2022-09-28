@@ -10,7 +10,7 @@ import {
   Button,
 } from "./GateOutFormStyles";
 
-function GateOutForm({ setGateOutData, gateInData }) {
+function GateOutForm({ setGateOutData }) {
   const [inputs, setInputs] = useState({
     shippingLine: "",
     containerNumber: "",
@@ -77,23 +77,26 @@ function GateOutForm({ setGateOutData, gateInData }) {
         </Card>
         <Card>
           <Label>Container status*:</Label>
-          <Input
+          <Select
             type="text"
             name="containerStatus"
-            value="EXITED"
+            placeholder="Enter now"
+            value={inputs.containerStatus}
             onChange={handleChange}
-            placeholder="Container status"
-          />
+          >
+            <option>Select status</option>
+            <option value="EXITED">EXITED</option>
+          </Select>
         </Card>
         <Card>
           <Label>Container size*:</Label>
           <Select
             type="text"
             name="containerSize"
-            placeholder="Enter now"
             value={inputs.containerSize}
             onChange={handleChange}
           >
+            <option>Select size</option>
             <option value="20FT">20FT</option>
             <option value="40FT">40FT</option>
           </Select>
@@ -105,6 +108,7 @@ function GateOutForm({ setGateOutData, gateInData }) {
             value={inputs.containerCondition}
             onChange={handleChange}
           >
+            <option>Select condition</option>
             <option value="OK">OK</option>
             <option value="DENTED">DENTED</option>
             <option value="SCRATCHED">SCRATCHED</option>

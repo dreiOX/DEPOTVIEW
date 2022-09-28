@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Heading, Data, Row, } from "./HistoryTableStyles";
+import { Container, Heading, Data, TopRow, BottomRow } from "./GateInHistoryTableStyles";
 
-function HistoryTable({ gateInData, gateOutData }) {
+function GateInHistoryTable({ gateInData }) {
   return (
     <Container>
       <table>
         <thead>
-          <Row>
+          <TopRow>
             <Heading>S.No</Heading>
             <Heading>Container Number</Heading>
             <Heading>Container Size</Heading>
@@ -14,13 +14,12 @@ function HistoryTable({ gateInData, gateOutData }) {
             <Heading>Container Location</Heading>
             <Heading>Container Condition</Heading>
             <Heading>Gate In Date</Heading>
-            <Heading>Gate Out Date</Heading>
-          </Row>
+          </TopRow>
         </thead>
 
         <tbody>
           {gateInData?.map((data, index) => (
-            <Row key={index}>
+            <BottomRow key={index}>
               <Data>{index + 1}</Data>
               <Data>{data.containerNumber}</Data>
               <Data>{data.containerSize}</Data>
@@ -28,8 +27,7 @@ function HistoryTable({ gateInData, gateOutData }) {
               <Data>{data.containerLocation}</Data>
               <Data>{data.containerCondition}</Data>
               <Data>{data.gateInDate}</Data>
-              <Data>25 SEP</Data>
-            </Row>
+            </BottomRow>
           ))}
         </tbody>
       </table>
@@ -37,4 +35,4 @@ function HistoryTable({ gateInData, gateOutData }) {
   );
 }
 
-export default HistoryTable;
+export default GateInHistoryTable;

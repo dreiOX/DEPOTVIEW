@@ -1,13 +1,21 @@
 import React from "react";
-import {CardContainer, Heading, Paragraph} from "./DamagedStyles"
+import { CardContainer, Heading, Paragraph } from "./DamagedStyles";
 
-function Damaged() {
+function Damaged({ gateInData }) {
+  const totalDamaged40Ft = gateInData?.filter(
+    (inData) =>
+      inData.containerCondition === "DAMAGED" && inData.containerSize === "40FT"
+  ).length;
+  const totalDamaged20Ft = gateInData?.filter(
+    (inData) =>
+      inData.containerCondition === "DAMAGED" && inData.containerSize === "20FT"
+  ).length;
   return (
     <CardContainer>
       <Heading>Damaged</Heading>
-      <Paragraph>86 X 40FT</Paragraph>
-      <Paragraph>--------------</Paragraph>
-      <Paragraph>100 X 20FT</Paragraph>
+      <Paragraph>{totalDamaged40Ft} OF 40FT</Paragraph>
+      {/* <Paragraph>--------------</Paragraph> */}
+      <Paragraph>{totalDamaged20Ft} OF 20FT</Paragraph>
     </CardContainer>
   );
 }

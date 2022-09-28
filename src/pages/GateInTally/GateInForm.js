@@ -15,11 +15,11 @@ function GateInForm({ setGateInData }) {
     shippingLine: "",
     containerNumber: "",
     truckNumber: "",
+    containerStatus: "",
     containerSize: "",
     containerCondition: "",
     containerLocation: "",
     gateInDate: "",
-    gateOutDate: "",
   });
 
   const handleChange = (e) => {
@@ -34,11 +34,11 @@ function GateInForm({ setGateInData }) {
       shippingLine: "",
       containerNumber: "",
       truckNumber: "",
+      containerStatus: "",
       containerSize: "",
       containerCondition: "",
       containerLocation: "",
       gateInDate: "",
-      gateOutDate: "",
     });
   };
 
@@ -77,6 +77,19 @@ function GateInForm({ setGateInData }) {
           />
         </Card>
         <Card>
+          <Label>Container status*:</Label>
+          <Select
+            type="text"
+            name="containerStatus"
+            placeholder="Enter now"
+            value={inputs.containerStatus}
+            onChange={handleChange}
+          >
+            <option>Select status</option>
+            <option value="ENTERED">ENTERED</option>
+          </Select>
+        </Card>
+        <Card>
           <Label>Container size*:</Label>
           <Select
             type="text"
@@ -85,6 +98,7 @@ function GateInForm({ setGateInData }) {
             value={inputs.containerSize}
             onChange={handleChange}
           >
+            <option>Select size</option>
             <option value="20FT">20FT</option>
             <option value="40FT">40FT</option>
           </Select>
@@ -96,6 +110,7 @@ function GateInForm({ setGateInData }) {
             value={inputs.containerCondition}
             onChange={handleChange}
           >
+            <option>Select condition</option>
             <option value="OK">OK</option>
             <option value="DENTED">DENTED</option>
             <option value="SCRATCHED">SCRATCHED</option>

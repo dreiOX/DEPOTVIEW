@@ -25,7 +25,7 @@ export const Card = styled.div`
   height: 10em;
   padding: 1em;
   margin: 0.5em 1em;
-  border-left: 0.2em solid green;
+  border-left: 0.2em solid #06c258;
 `;
 
 export const CardTop = styled.div`

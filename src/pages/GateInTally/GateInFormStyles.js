@@ -23,9 +23,15 @@ export const Input = styled.input`
   border: 1px solid black;
   border-radius: 0.2em;
 `;
-export const Heading = styled.h4`
-  padding 1em;
-  border bottom: 1px solid black;
+// export const Heading = styled.h4`
+//   padding 1em;
+//   `;
+export const Heading = styled.div`
+  padding: 2em;
+  font-weight: bold;
+  &:hover {
+    color: green;
+  }
 `;
 export const Select = styled.select`
   padding: 1em;
@@ -37,4 +43,8 @@ export const Button = styled.button`
   border-radius: 0.5em;
   color: white;
   width: 20%;
+  &:hover {
+    background: black;
+    transition: 0.2s ease-in;
+  }
 `;

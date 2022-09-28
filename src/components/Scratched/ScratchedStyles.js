@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  background: #f9ddb1;
+  background: #daf0ff;
   padding: 2em;
   border-none: none;
   border-radius: 0.5em;
@@ -13,14 +13,13 @@ export const CardContainer = styled.div`
     transform: translateX(-5px);
     // border: 1px solid #7600b6;
   }
+
 `;
 
 export const Heading = styled.h4`
-  color: #e27602;
+  color: #0747a1;
   margin-bottom: 2em;
-  // border-bottom: 1px solid #7600b6;
+//   border-bottom: 1px solid #7600b6;
   padding-bottom: 1em;
 `;
-export const Paragraph = styled.p`
-  // color: #e27602;
-`;
+export const Paragraph = styled.p``;

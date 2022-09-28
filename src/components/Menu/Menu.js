@@ -40,9 +40,14 @@ function Menu() {
           Gate-out tally
         </NavLink>
 
-        <NavLink to="/Container-history">
+        <NavLink to="/Gate-in-history">
           <MdOutlineHistory />
-          Container History
+          Gate-in history
+        </NavLink>
+
+        <NavLink to="/Gate-out-history">
+          <MdOutlineHistory />
+          Gate-out history
         </NavLink>
       </div>
     </Nav>

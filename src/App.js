@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ContainerManagement from "./pages/ContainerManagement/ContainerManagement";
 import GateInTally from "./pages/GateInTally/GateIn";
 import GateOutTally from "./pages/GateOutTally/GateOut";
-import ContainerHistory from "./pages/ContainerHistory/ContainerHistory";
-import { useState } from "react";
+import GateInHistory from "./pages/GateInHistory/GateInHistory";
+import GateOutHistory from "./pages/GateOutHistory/GateOutHistory";
 
 function App() {
   const [gateInData, setGateInData] = useState([
@@ -13,10 +14,10 @@ function App() {
       containerNumber: "TCLU5314579",
       truckNumber: "LSR 734 XY",
       containerSize: "40FT",
+      containerStatus: "ENTERED",
       containerCondition: "DAMAGED",
       containerLocation: "A153",
       gateInDate: "24 SEP",
-      gateOutDate: "",
     },
   ]);
   const [gateOutData, setGateOutData] = useState([
@@ -25,6 +26,7 @@ function App() {
       containerNumber: "TCLU5314562",
       truckNumber: "LSR 734 XY",
       containerSize: "40FT",
+      containerStatus: "EXITED",
       containerCondition: "DAMAGED",
       containerLocation: "A153",
       gateOutDate: "24 SEP",
@@ -35,7 +37,12 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route
+            path="/"
+            element={
+              <Dashboard gateInData={gateInData} gateOutData={gateOutData} />
+            }
+          />
           <Route
             path="/Management"
             element={
@@ -51,17 +58,21 @@ function App() {
           />
           <Route
             path="/Gate-out-tally"
+            element={<GateOutTally setGateOutData={setGateOutData} />}
+          />
+          <Route
+            path="/Gate-in-history"
             element={
-              <GateOutTally
-                setGateOutData={setGateOutData}
+              <GateInHistory
                 gateInData={gateInData}
+                gateOutData={gateOutData}
               />
             }
           />
           <Route
-            path="/Container-history"
+            path="/Gate-out-history"
             element={
-              <ContainerHistory
+              <GateOutHistory
                 gateInData={gateInData}
                 gateOutData={gateOutData}
               />
