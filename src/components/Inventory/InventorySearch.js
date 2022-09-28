@@ -12,6 +12,7 @@ function InventorySearch() {
       <div>
         <Input type="search" defaultValue="Enter container number" />
       </div>
+      
     </Top>
   );
 }

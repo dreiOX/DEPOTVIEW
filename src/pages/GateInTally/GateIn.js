@@ -1,13 +1,11 @@
-import Menu from "../../components/Menu/Menu";
+import Layout from "../../components/Layout";
 import GateInForm from "./GateInForm";
 
 function GateInTally({ setGateInData }) {
   return (
-    <div>
-      <Menu />
-
+    <Layout>
       <GateInForm setGateInData={setGateInData} />
-    </div>
+    </Layout>
   );
 }
 

@@ -1,16 +1,14 @@
 import React from "react";
-import Menu from "../../components/Menu/Menu";
 import { DashboardContainer, TopCards, LowerCards } from "./DashboardStyles";
 import TotalTallyIn from "../../components/TotalTallyIn/TotalTallyIn";
 import TotalTallyOut from "../../components/TotalTallyOut/TotalTallyOut";
 import TotalInventory from "../../components/TotalInventory/TotalInventory";
 import Damaged from "../../components/Damaged/Damaged";
+import Layout from "../../components/Layout";
 
 function Dashboard() {
   return (
-    <div>
-      <Menu />
-
+    <Layout>
       <DashboardContainer>
         <h4>Dashboard</h4>
 
@@ -26,7 +24,7 @@ function Dashboard() {
           <Damaged />
         </LowerCards>
       </DashboardContainer>
-    </div>
+    </Layout>
   );
 }
 

@@ -1,13 +1,12 @@
 import React from "react";
-import Menu from "../../components/Menu/Menu";
+import Layout from "../../components/Layout";
 import HistoryTable from "./HistoryTable";
 
-function ContainerHistory({gateInData}) {
+function ContainerHistory({ gateInData, gateOutData }) {
   return (
-    <div>
-      <Menu />
-      <HistoryTable gateInData={gateInData}/>
-    </div>
+    <Layout>
+      <HistoryTable gateInData={gateInData} gateOutData={gateOutData} />
+    </Layout>
   );
 }
 

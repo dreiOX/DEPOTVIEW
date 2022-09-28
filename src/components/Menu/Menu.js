@@ -20,27 +20,27 @@ function Menu() {
       </Logo>
 
       <div>
-        <NavLink to='/'>
+        <NavLink to="/">
           <MdDashboard />
           Dashboard
         </NavLink>
 
-        <NavLink to='/Management'>
+        <NavLink to="/Management">
           <BsBoundingBox />
           Container management
         </NavLink>
 
-        <NavLink to='/Gate-in-tally'>
+        <NavLink to="/Gate-in-tally">
           <MdCallReceived />
           Gate-in tally
         </NavLink>
 
-        <NavLink to='/Gate-out-tally'>
+        <NavLink to="/Gate-out-tally">
           <MdCallMade />
           Gate-out tally
         </NavLink>
-        
-        <NavLink to='/Container-history'>
+
+        <NavLink to="/Container-history">
           <MdOutlineHistory />
           Container History
         </NavLink>

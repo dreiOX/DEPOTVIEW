@@ -10,14 +10,14 @@ import {
   Button,
 } from "./GateOutFormStyles";
 
-function GateOutForm({ setGateOutData }) {
+function GateOutForm({ setGateOutData, gateInData }) {
   const [inputs, setInputs] = useState({
     shippingLine: "",
     containerNumber: "",
     truckNumber: "",
     containerSize: "",
     containerCondition: "",
-    gateInDate: "",
+    gateOutDate: "",
     containerStatus: "",
   });
 
@@ -27,6 +27,7 @@ function GateOutForm({ setGateOutData }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     setGateOutData((prevGateOutDataState) => [...prevGateOutDataState, inputs]);
 
     setInputs({
@@ -35,7 +36,7 @@ function GateOutForm({ setGateOutData }) {
       truckNumber: "",
       containerSize: "",
       containerCondition: "",
-      gateInDate: "",
+      gateOutDate: "",
       containerStatus: "",
     });
   };
@@ -112,10 +113,10 @@ function GateOutForm({ setGateOutData }) {
         </Card>
 
         <Card>
-          <Label>Gate in date*:</Label>
+          <Label>Gate out date*:</Label>
           <Input
             type="date"
-            name="gateInDate"
+            name="gateOutDate"
             value="date"
             onChange={handleChange}
           />

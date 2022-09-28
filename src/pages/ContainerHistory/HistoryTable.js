@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Heading, Data, Row, BodyRow } from "./HistoryTableStyles";
+import { Container, Heading, Data, Row, } from "./HistoryTableStyles";
 
 function HistoryTable({ gateInData, gateOutData }) {
   return (
@@ -28,7 +28,7 @@ function HistoryTable({ gateInData, gateOutData }) {
               <Data>{data.containerLocation}</Data>
               <Data>{data.containerCondition}</Data>
               <Data>{data.gateInDate}</Data>
-              <Data>15 SEP 2014</Data>
+              <Data>25 SEP</Data>
             </Row>
           ))}
         </tbody>

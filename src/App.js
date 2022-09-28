@@ -7,8 +7,29 @@ import ContainerHistory from "./pages/ContainerHistory/ContainerHistory";
 import { useState } from "react";
 
 function App() {
-  const [gateInData, setGateInData] = useState([]);
-  const [gateOutData, setGateOutData] = useState([]);
+  const [gateInData, setGateInData] = useState([
+    {
+      shippingLine: "HAPAG LLOYD",
+      containerNumber: "TCLU5314579",
+      truckNumber: "LSR 734 XY",
+      containerSize: "40FT",
+      containerCondition: "DAMAGED",
+      containerLocation: "A153",
+      gateInDate: "24 SEP",
+      gateOutDate: "",
+    },
+  ]);
+  const [gateOutData, setGateOutData] = useState([
+    {
+      shippingLine: "HAPAG LLOYD",
+      containerNumber: "TCLU5314562",
+      truckNumber: "LSR 734 XY",
+      containerSize: "40FT",
+      containerCondition: "DAMAGED",
+      containerLocation: "A153",
+      gateOutDate: "24 SEP",
+    },
+  ]);
 
   return (
     <div>
@@ -30,7 +51,12 @@ function App() {
           />
           <Route
             path="/Gate-out-tally"
-            element={<GateOutTally setGateOutData={setGateOutData} />}
+            element={
+              <GateOutTally
+                setGateOutData={setGateOutData}
+                gateInData={gateInData}
+              />
+            }
           />
           <Route
             path="/Container-history"

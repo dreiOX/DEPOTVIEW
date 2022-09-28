@@ -1,13 +1,12 @@
 import React from "react";
-import Menu from "../../components/Menu/Menu";
 import GateOutForm from "./GateOutForm";
+import Layout from "..//../components/Layout";
 
-function GateOutTally({ setGateOutData }) {
+function GateOutTally({ setGateOutData, gateInData }) {
   return (
-    <div>
-      <Menu />
-      <GateOutForm setGateOutData={setGateOutData} />
-    </div>
+    <Layout>
+      <GateOutForm setGateOutData={setGateOutData} gateInData={gateInData} />
+    </Layout>
   );
 }
 

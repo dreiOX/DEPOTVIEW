@@ -9,97 +9,131 @@ import {
   CardIcon,
   CardStatus,
   CardId,
+  Cover,
 } from "./GateInStyles";
 import { AiOutlineMore } from "react-icons/ai";
 
-const GateInCard = ({ inData, index }) => {
-  return (
-    <Card key={index}>
-      <CardTop>
-        <CardId>{inData.containerNumber}</CardId>
-        <CardStatus>{inData.containerCondition}</CardStatus>
-      </CardTop>
+// const GateInCard = ({ gateInData }) => {
+//   return gateInData.map((gateItem, index) => (
+//     <Card key={index}>
+//       <CardTop>
+//         <CardId>{gateItem.containerNumber}</CardId>
+//         <CardStatus>{gateItem.containerCondition}</CardStatus>
+//       </CardTop>
 
-      <CardMiddle>{inData.containerLocation}</CardMiddle>
+//       <CardMiddle>{gateItem.containerLocation}</CardMiddle>
 
-      <CardBottom>
-        <CardDates>
-          <p>{inData.gateInDate}</p>
-          <p>{inData.dateOut}</p>
-        </CardDates>
-        <CardIcon>
-          <AiOutlineMore />
-        </CardIcon>
-        <div>
-          <p>{inData.truckNumber}</p>
-          <p>{inData.containerStatus}</p>
-        </div>
-      </CardBottom>
-    </Card>
-  );
-};
+//       <CardBottom>
+//         <CardDates>
+//           <p>{gateItem.gateInDate}</p>
+//           <p>{gateItem.dateOut}</p>
+//         </CardDates>
+//         <CardIcon>
+//           <AiOutlineMore />
+//         </CardIcon>
+//         <div>
+//           <p>{gateItem.truckNumber}</p>
+//           <p>{gateItem.containerStatus}</p>
+//         </div>
+//       </CardBottom>
+//     </Card>
+//   ));
+// };
 
-const GateOutCard = ({ outData, index }) => {
-  return (
-    <Card key={index}>
-      <CardTop>
-        <CardId>{outData.containerNumber}</CardId>
-        <CardStatus>{outData.containerCondition}</CardStatus>
-      </CardTop>
+// const GateOutCard = ({ gateOutData }) => {
+//   return gateOutData.map((gateOutItems, index) => (
+//     <Card key={index}>
+//       <CardTop>
+//         <CardId>{gateOutItems.containerNumber}</CardId>
+//         <CardStatus>{gateOutItems.containerCondition}</CardStatus>
+//       </CardTop>
 
-      <CardMiddle>{outData.containerStatus}</CardMiddle>
+//       <CardMiddle>{gateOutItems.containerStatus}</CardMiddle>
 
-      <CardBottom>
-        <CardDates>
-          <p>{outData.dateOut}</p>
-        </CardDates>
-        <CardIcon>
-          <AiOutlineMore />
-        </CardIcon>
-        <div>
-          <p>{outData.truckNumber}</p>
-          <p>{outData.containerStatus}</p>
-        </div>
-      </CardBottom>
-    </Card>
+//       <CardBottom>
+//         <CardDates>
+//           <p>{gateOutItems.dateOut}</p>
+//         </CardDates>
+//         <CardIcon>
+//           <AiOutlineMore />
+//         </CardIcon>
+//         <div>
+//           <p>{gateOutItems.truckNumber}</p>
+//           <p>{gateOutItems.containerStatus}</p>
+//         </div>
+//       </CardBottom>
+//     </Card>
+//   ));
+// };
+
+const DataCard = ({ cardData, label, cardColor }) => {
+  return cardData.length > 0 ? (
+    cardData.map((gateItem, index) => (
+      <Card key={index} cardColor={!cardColor}>
+        <CardTop>
+          <CardId>{gateItem.containerNumber}</CardId>
+          <CardStatus cardColor={!cardColor}>
+            {gateItem.containerCondition}
+          </CardStatus>
+        </CardTop>
+
+        <CardMiddle>{gateItem.containerLocation}</CardMiddle>
+
+        <CardBottom>
+          <CardDates>
+            <p>{gateItem.gateInDate}</p>
+            <p>{gateItem.gateInDate}</p>
+          </CardDates>
+          <CardIcon>
+            <AiOutlineMore />
+          </CardIcon>
+          <div>
+            <p>{gateItem.truckNumber}</p>
+            <p>{gateItem.containerStatus}</p>
+          </div>
+        </CardBottom>
+      </Card>
+    ))
+  ) : (
+    <p>No {label} Data</p>
   );
 };
 
 function GateInDataCard({ gateInData, gateOutData }) {
-  // const isGateInData = gateInData.isGateIndata;
-  // const isGateOutData = gateOutData.isGateOutdata;
   return (
-    <>
-      {gateInData?.length > 0 ? (
-        <Container>
-          {gateInData &&
-            gateInData?.map((inData, index) => (
-              <GateInCard key={index} inData={inData} index={index} />
-            ))}
-        </Container>
-      ) : (
-        <p>No Data</p>
-      )}
+    <Cover>
+      <Container>
+        <h2>Gate In</h2>
+        <DataCard cardData={gateInData} label={"Gate In"} cardColor={true} />
+      </Container>
 
-      {/* {isGateInData.length > 0 ? (
-        <Container>
-          {gateOutData &&
-            gateInData?.map((inData, index) => (
-              <GateInCard key={index} inData={inData} index={index} />
-            ))}
-        </Container>
-      ) : null}
+      <Container>
+        <h2>Gate Out</h2>
+        <DataCard cardData={gateOutData} label={"Gate Out"} />
+      </Container>
 
-      {isGateOutData.length > 0 ? (
+      {/* <Container>
+        <GateOutCard gateOutData={gateOutData} label={'Gate Out'}/>
+      </Container>
+
+      <Container>
+        <GateInCard gateInData={gateInData}  label={'Gate Out'}/>
+      </Container> */}
+    </Cover>
+  );
+}
+
+export default GateInDataCard;
+
+{
+  /* {gateOutData?.length > 0 ? (
         <Container>
           {gateOutData &&
             gateOutData?.map((outData, index) => (
               <GateOutCard key={index} outData={outData} index={index} />
             ))}
         </Container>
-      ) : null} */}
-    </>
-  );
+      ) : (
+        <p>No Data</p>
+      )} */
 }
-
-export default GateInDataCard;

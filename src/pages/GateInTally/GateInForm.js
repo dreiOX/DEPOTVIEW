@@ -19,6 +19,7 @@ function GateInForm({ setGateInData }) {
     containerCondition: "",
     containerLocation: "",
     gateInDate: "",
+    gateOutDate: "",
   });
 
   const handleChange = (e) => {
@@ -37,6 +38,7 @@ function GateInForm({ setGateInData }) {
       containerCondition: "",
       containerLocation: "",
       gateInDate: "",
+      gateOutDate: "",
     });
   };
 
