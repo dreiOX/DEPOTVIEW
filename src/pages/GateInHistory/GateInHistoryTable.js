@@ -4,8 +4,9 @@ import { Container, Heading, Data, TopRow, BottomRow } from "./GateInHistoryTabl
 function GateInHistoryTable({ gateInData }) {
   return (
     <Container>
-      <table>
-        <thead>
+      
+      <div>
+        <div>
           <TopRow>
             <Heading>S.No</Heading>
             <Heading>Container Number</Heading>
@@ -15,9 +16,9 @@ function GateInHistoryTable({ gateInData }) {
             <Heading>Container Condition</Heading>
             <Heading>Gate In Date</Heading>
           </TopRow>
-        </thead>
+        </div>
 
-        <tbody>
+        <div>
           {gateInData?.map((data, index) => (
             <BottomRow key={index}>
               <Data>{index + 1}</Data>
@@ -29,8 +30,8 @@ function GateInHistoryTable({ gateInData }) {
               <Data>{data.gateInDate}</Data>
             </BottomRow>
           ))}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </Container>
   );
 }

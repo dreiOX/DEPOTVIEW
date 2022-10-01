@@ -48,7 +48,7 @@ const DataCard = ({ cardData, label, cardColor }) => {
   );
 };
 
-function GateInDataCard({ gateInData, gateOutData }) {
+function InventoryDataCard({ gateInData, gateOutData }) {
   return (
     <Cover>
       <Container>
@@ -64,4 +64,4 @@ function GateInDataCard({ gateInData, gateOutData }) {
   );
 }
 
-export default GateInDataCard;
+export default InventoryDataCard;

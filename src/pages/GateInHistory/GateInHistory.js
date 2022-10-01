@@ -1,12 +1,14 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import GateInHistoryTable from "./GateInHistoryTable";
-import InventorySearch from "../../components/Inventory/InventorySearch";
+import GateInSearch from "../../components/Inventory/GateInSearch";
+import { Heading } from "../GateInTally/GateInFormStyles";
 
-function GateInHistory({ gateInData }) {
+function GateInHistory({ gateInData, setGateInData }) {
   return (
     <Layout>
-      <InventorySearch />
+      <Heading>Container Gate-In Tally</Heading>
+      <GateInSearch gateInData={gateInData} setGateInData={setGateInData} />
       <GateInHistoryTable gateInData={gateInData} />
     </Layout>
   );

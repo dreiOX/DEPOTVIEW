@@ -98,7 +98,7 @@ function GateInForm({ setGateInData }) {
             value={inputs.containerSize}
             onChange={handleChange}
           >
-            <option>Select size</option>
+            <option value="">Select size</option>
             <option value="20FT">20FT</option>
             <option value="40FT">40FT</option>
           </Select>
@@ -110,7 +110,7 @@ function GateInForm({ setGateInData }) {
             value={inputs.containerCondition}
             onChange={handleChange}
           >
-            <option>Select condition</option>
+            <option value="">Select condition</option>
             <option value="OK">OK</option>
             <option value="DENTED">DENTED</option>
             <option value="SCRATCHED">SCRATCHED</option>

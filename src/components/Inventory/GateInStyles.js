@@ -30,9 +30,9 @@ export const Heading = styled.div`
 `;
 
 export const Container = styled.div`
-  // margin-left: 20%;
-  width: 50%;
+  width: 100%;
   // overflow-y: scroll;
+  // height: 100vh;
 `;
 export const Card = styled.div`
   background: #fff;

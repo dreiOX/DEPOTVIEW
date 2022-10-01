@@ -15,7 +15,6 @@ function Dented({ gateInData }) {
     <CardContainer>
       <Heading>Dented</Heading>
       <Paragraph>{totalDented40Ft} OF 40FT</Paragraph>
-      {/* <Paragraph>--------------</Paragraph> */}
       <Paragraph>{totalDented20Ft} OF 20FT</Paragraph>
     </CardContainer>
   );

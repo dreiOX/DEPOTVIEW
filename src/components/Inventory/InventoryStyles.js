@@ -4,7 +4,7 @@ export const Input = styled.input`
   padding: 0.75em;
   border: none;
   border-radius: 0.5em;
-  width: 80%;
+  width: 100%;
   margin: 0.5em 1em;
 `;
 
@@ -25,6 +25,7 @@ export const Container = styled.div`
   margin-left: 20%;
   width: 30%;
   // overflow-y: scroll;
+  // height: 90vh;
 `;
 export const Card = styled.div`
   background: #fff;

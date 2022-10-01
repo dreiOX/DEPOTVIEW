@@ -17,7 +17,7 @@ function App() {
       containerStatus: "ENTERED",
       containerCondition: "DAMAGED",
       containerLocation: "A153",
-      gateInDate: "24 SEP",
+      gateInDate: "2022-09-26",
     },
   ]);
   const [gateOutData, setGateOutData] = useState([
@@ -29,7 +29,7 @@ function App() {
       containerStatus: "EXITED",
       containerCondition: "DAMAGED",
       containerLocation: "A153",
-      gateOutDate: "24 SEP",
+      gateOutDate: "2022-09-26",
     },
   ]);
 
@@ -62,21 +62,11 @@ function App() {
           />
           <Route
             path="/Gate-in-history"
-            element={
-              <GateInHistory
-                gateInData={gateInData}
-                gateOutData={gateOutData}
-              />
-            }
+            element={<GateInHistory gateInData={gateInData} />}
           />
           <Route
             path="/Gate-out-history"
-            element={
-              <GateOutHistory
-                gateInData={gateInData}
-                gateOutData={gateOutData}
-              />
-            }
+            element={<GateOutHistory gateOutData={gateOutData} />}
           />
         </Routes>
       </Router>

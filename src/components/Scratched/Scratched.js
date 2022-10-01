@@ -17,7 +17,6 @@ function Scratched({ gateInData }) {
     <CardContainer>
       <Heading>Scratched</Heading>
       <Paragraph>{totalScratched40Ft} OF 40FT</Paragraph>
-      {/* <Paragraph>--------------</Paragraph> */}
       <Paragraph>{totalScratched20Ft} OF 20FT</Paragraph>
     </CardContainer>
   );

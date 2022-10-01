@@ -14,7 +14,6 @@ function Damaged({ gateInData }) {
     <CardContainer>
       <Heading>Damaged</Heading>
       <Paragraph>{totalDamaged40Ft} OF 40FT</Paragraph>
-      {/* <Paragraph>--------------</Paragraph> */}
       <Paragraph>{totalDamaged20Ft} OF 20FT</Paragraph>
     </CardContainer>
   );
