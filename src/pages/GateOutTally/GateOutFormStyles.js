@@ -23,14 +23,18 @@ export const Input = styled.input`
   border-radius: 0.2em;
 `;
 export const Heading = styled.div`
-padding: 2em;
-font-weight: bold;
-&:hover {
-  color: green;
-}
+  padding: 2em;
+  font-weight: bold;
+  &:hover {
+    color: green;
+  }
 `;
 export const Select = styled.select`
   padding: 1em;
+  float: left;
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 0.2em;
 `;
 export const Button = styled.button`
   padding: 1em;
@@ -39,6 +43,7 @@ export const Button = styled.button`
   border-radius: 0.5em;
   color: white;
   width: 20%;
+  cursor: pointer;
   &:hover {
     background: black;
     transition: 0.2s ease-in;

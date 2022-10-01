@@ -62,11 +62,21 @@ function App() {
           />
           <Route
             path="/Gate-in-history"
-            element={<GateInHistory gateInData={gateInData} />}
+            element={
+              <GateInHistory
+                gateInData={gateInData}
+                setGateInData={setGateInData}
+              />
+            }
           />
           <Route
             path="/Gate-out-history"
-            element={<GateOutHistory gateOutData={gateOutData} />}
+            element={
+              <GateOutHistory
+                gateOutData={gateOutData}
+                setGateOutData={setGateOutData}
+              />
+            }
           />
         </Routes>
       </Router>

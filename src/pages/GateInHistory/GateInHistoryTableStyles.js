@@ -7,22 +7,22 @@ export const Container = styled.div`
 
 export const Heading = styled.div`
   padding: 1.2em 0em;
-  color: black;
   background: white;
   width: 10em;
+  text-align: center;
   border: 1px solid black;
 `;
 export const HeadingTop = styled.div`
   padding: 2em;
+  margin-left: 20%;
   font-weight: bold;
   &:hover {
     color: green;
   }
 `;
-export const TopRow = styled.div`
+export const TopRow = styled.tr`
   margin-bottom: 1em;
   display: flex;
-  gap: 0.15em;
   border: 1px solid black;
 `;
 
@@ -36,6 +36,8 @@ export const Data = styled.div`
   text-align: center;
   background-color: white;
   width: 10em;
+  height: 3em;
+  // margin: auto;
   border-right: 1px solid black;
   &:hover {
     color: green;

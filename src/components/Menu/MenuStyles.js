@@ -15,6 +15,10 @@ export const Nav = styled.nav`
 
 export const Logo = styled.div`
   padding-bottom: 80px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  // padding: 20px 10px 20px 10px;
 `;
 
 export const NavLink = styled(Link)`

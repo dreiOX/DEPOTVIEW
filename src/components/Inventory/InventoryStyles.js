@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Input = styled.input`
   padding: 0.75em;
-  border: none;
+  border: 1px solid black;
   border-radius: 0.5em;
-  width: 100%;
+  width: 60%;
   margin: 0.5em 1em;
 `;
 
 export const Top = styled.div`
-  margin-left: 20%;
+  margin-left: 21%;
   // padding-bottom: 1em;
   width: 30%;
 `;
