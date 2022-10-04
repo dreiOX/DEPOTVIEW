@@ -1,3 +1,3 @@
 DEPOTVIEW
 
-A Shipping container warehouse/terminal management application
+A container warehouse/terminal management application
